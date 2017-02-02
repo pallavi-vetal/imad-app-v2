@@ -126,8 +126,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/:.*',function(req,res){
- var articleName=req.params;
+app.get('/:p',function(req,res){
+ var articleName=req.params.p;
  res.send(createTemplate(articles[articleName]));
 });
 
