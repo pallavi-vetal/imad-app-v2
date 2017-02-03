@@ -42,7 +42,7 @@ var articles = {
 						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
 					</p>`},
 		'article-two': {
-			title:'Article TTwo',
+			title:'Article Two',
 			heading:'Article Two',
 			date:'May 29, 1991',
 			contents:`
