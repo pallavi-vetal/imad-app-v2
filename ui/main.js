@@ -12,11 +12,5 @@ function moveDown(){
     profile.style.marginRight = margin + 'px';
 }
 profile.onclick = function(){
-    if(margin < 50){
-        var interval =setInterval(moveRight,50); 
-    }
-    else{
-        margin = 0;
-        var inter =setInterval(moveDown,50);
-    }
+   var inter = setInterval(moveRight,100);
 };
