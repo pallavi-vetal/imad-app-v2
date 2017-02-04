@@ -6,7 +6,7 @@ function moveRight(){
     margin = margin + 10;
     profile.style.marginLeft = margin + 'px';
     }
-}
+
 function moveDown(){
     margin = margin +10;
     profile.style.marginRight = margin + 'px';
