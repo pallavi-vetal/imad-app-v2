@@ -4,7 +4,13 @@ var profile = document.getElementById('propic');
 var margin = 0;
 function moveRight(){
     margin = margin + 10;
+    if(margin <50){
     profile.style.marginLeft = margin + 'px';
+    }
+    if (margin>50){
+        margin = 0;
+         var inter = setInterval(moveDown,100);
+    }
     }
 
 function moveDown(){
