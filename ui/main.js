@@ -12,7 +12,7 @@ function moveDown(){
     profile.style.marginRight = margin + 'px';
 }
 profile.onclick = function(){
-    if(profile.style.marginLeft < 50){
+    if(margin < 50){
         var interval =setInterval(moveRight,50); 
     }
     else{
