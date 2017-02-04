@@ -7,10 +7,13 @@ function moveRight(){
     if(margin <50){
     profile.style.marginLeft = margin + 'px';
     }
-    if (margin>50){
-        margin = 0;
-         var inter = setInterval(moveDown,100);
+    else{
+         margin = 0;
+        while(margin<150){
+       
+        var inter = setInterval(moveDown,100);
     }
+    } 
     }
 
 function moveDown(){
