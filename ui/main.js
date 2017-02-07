@@ -44,7 +44,7 @@ profile.onclick = function(){
 				   }
 				      
 				  };
-		              request.open('GET','http://pallavi-vetal.imad.hasura-app.io/counter',true);
+		          request.open('GET','http://pallavi-vetal.imad.hasura-app.io',true);
 			   
 			      request.send(null); 
 				};
