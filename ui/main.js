@@ -39,7 +39,7 @@ profile.onclick = function(){
 					    var counter=request.responseText;
 					   
 					    var span=document.getElementById('count');
-					    span.innetHTML=counter.toString();
+					    span.inneHTML=counter.toString();
 					 }
 				   }
 				      
