@@ -134,7 +134,9 @@ app.get('/', function (req, res) {
 app.get('/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-
+app.get('/1.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '1.jpg'));
+});
 
 
 app.get('/:p',function(req,res){
