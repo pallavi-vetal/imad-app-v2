@@ -1,53 +1,101 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="ui/style.css">
-    <title>Web App</title>
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-	
+	<meta charset = "utf-8">
+     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      
+	 <title>Home Page</title>
+	  <!-- Bootstrap -->
+     	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		 <style type="text/css">
+
+		 .floating-box {
+		    float: left;
+		    width: 30%;
+		    height: 350px;
+		    box-shadow: 10px 10px 5px #888888;
+		    border: 3px solid #888888; 
+		    padding-left: 20px;
+		}
+		 </style>  
+
+   
 </head>
 <body>
-	<!-- Latest compiled JavaScript -->
-	<div class="container">
-	<div class="jumbotron">
-		<div class="page-header text-center	"><h3>Profile</h3></div>
-		<div class="well">
-			<div class="row">
-				<div class="col-md-3">
-				<img src="https://discourse.imad.hasura.io/user_avatar/discourse.imad.hasura.io/pallavi_vetal/120/2928_1.png" class="img-rounded" alt="profile picture" height="200px" width="200px" id="propic">
-				</div>
-				<div class="col-md-6"><a href="https://discourse.imad.hasura.io/users/pallavi_vetal/activity"><button type="button" class="btn btn-primary btn-lg ">Pallavi Vetal</button></a>	
-				<hr><p>
-        		<a href="#">
-          			<span class="glyphicon glyphicon-map-marker">Pune</span>
-       			 </a>
-      			</p>
-				<p>
-        			<a href="https://in.linkedin.com/in/pallavi-vetal-0b80b3115">
-          			<span class="glyphicon glyphicon-globe">in.linkedin.com</span>
-        			</a>
-      			</p>
-      			<p style="color: #5886A6"><span>Indian, Learner, Student, Net-Savvy,Tech Enthusiast, Non-vg Lover, Linux Lover, yudansha (you-don-shaw) <i class="em em-blush"></i></span></p>
-				</div>
-			</div>	
-			<div class="row">
-				<div class="col-md-2">
-				</div>	
-			</div>	
+	<div class="parallax">
+	      <div class="container">
+	      	<nav class="navbar navbar-inverse  w3-animate-bottom" role="navigation">
+	      	<div class="container-fluid">
+		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+		      	  <div class="navbar-header">
+		      		<a href="#" class="navbar-brand">Blog</a>
+		      	  </div>
+		      	  <div class="collapse navbar-collapse" id="myNavbar">
+		      		<ul class="nav navbar-nav">
+				      <li class="active w3-hover-blue"><a href="#">Home</a></li>
+				      <li class="dropdown w3-hover-green">
+						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
+						  <span class="caret"></span></a>
+						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
+						    <li role="presentation" ><a role="menuitem" href="#">Personal</a></li>
+						    <li role="presentation"><a role="menuitem" href="#">Professional</a></li>
+						    <li role="presentation" ><a role="menuitem" href="#">Gallery</a></li>
+						    <li role="presentation" ></li>
+						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
+						  </ul>
+						</li>
+				      <li><a href="#" class="w3-hover-blue">Article One</a></li>
+				      <li><a href="#" class="w3-hover-red">Article Two</a></li>
+				      <li><a href="#" class="w3-hover-teal">Article Three</a></li>
+				    </ul>	
+		      	</div>	
+		      </div>	
+	      	</nav>
+	      </div>
+     
+      <div class="container">
+      	<div class="floating-box w3-animate-zoom ">
+      		<div class="navbar-header">
+      			<a class="navbar-brand" href="#" style="color: white">My Name</a>
+      		</div>
+  	    </div>	
+  	    <div class="floating-box w3-animate-zoom ">
+      		<div class="navbar-header">
+      			<a class="navbar-brand" href="#" style="color: white">My Name</a>
+      		</div>
+  	    </div>	
+  	    <div class="floating-box w3-animate-zoom ">
+      		<div class="navbar-header">
+      			<a class="navbar-brand" href="#" style="color: white">My Name</a>
+      		</div>
+  	    </div>	
+  	  </div>	
+    </div>    
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.dropdown:hover .dropdown-menu{
+		display: block;
+		background: gray;	
 
-			</div>
-		</div>	
-		<div class="row">
-                   This button<button class="btn btn-primary" id="counter">Click me!!</button>has been clicked <span id="count"> 0 </span>times 
-                </div>
-		</div>
-	
-	
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/main.js"></script>
+		
+	}
+</style>      
 </body>
+
 </html>
