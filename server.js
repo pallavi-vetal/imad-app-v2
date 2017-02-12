@@ -103,12 +103,15 @@ function createTemplate(data)
                 			        <span class="icon-bar"></span>                        
                 			      </button>
                 		      	  <div class="navbar-header">
-                		      		<a href="#" class="navbar-brand"><strong>${heading}</strong></a>
+                		      		<a href="#" class="navbar-brand"><strong></strong></a>
                 		      	  </div>
                 		      	  <div class="collapse navbar-collapse" id="myNavbar">
                 		      		<ul class="nav navbar-nav">
-                				      <li class="active w3-hover-blue"><a href="#">Home</a></li>
-                				      <li class="navbar-right w3-hover-blue">${date}</li>
+                				      
+                                      <ul class="nav navbar-nav navbar-right">
+                                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                    </ul>
                 				      <li class="dropdown w3-hover-green">
                 						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
                 						  <span class="caret"></span></a>
@@ -120,7 +123,8 @@ function createTemplate(data)
                 						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
                 						  </ul>
                 						</li>
-                				      <li><a href="article-one" class="w3-hover-blue">Article One</a></li>
+                				      <li><a href="article-one" class="w3-hover-blue">Home</a></li>
+                				      <li class="active w3-hover-blue"><a href="#">${heading}</a></li>
                 				      <li><a href="article-two" class="w3-hover-red">Article Two</a></li>
                 				      <li><a href="article-three" class="w3-hover-teal">Article Three</a></li>
                 				    </ul>	
