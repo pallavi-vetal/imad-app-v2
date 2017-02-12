@@ -96,7 +96,7 @@ function createTemplate(data)
 					<div class="parallax">
                 	      <div class="container">
                 	      	<nav class="navbar navbar-inverse  w3-animate-up" role="navigation">
-                	      	<div class="container-fluid">
+                	      
                 		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 			        <span class="icon-bar"></span>
                 			        <span class="icon-bar"></span>
@@ -136,7 +136,7 @@ function createTemplate(data)
                                               <button type="submit" class="btn btn-default">Submit</button>
                                         </form>
                                 </div>	
-                		      </div>	
+                		  	
                 	      	</nav>
                 	      </div>
                      
