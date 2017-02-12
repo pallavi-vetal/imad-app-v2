@@ -1,4 +1,5 @@
 console.log('Loaded!');
+var red= '#FFC0CB';
 var like_btn=document.getElementById('like-btn');
 like_btn.onclick=function(){
   
@@ -14,7 +15,7 @@ like_btn.onclick=function(){
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                like_btn.style.Color = #FFC0CB;
+                like_btn.style.Color = red ;
                 
             }
         }
