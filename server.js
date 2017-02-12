@@ -103,7 +103,7 @@ function createTemplate(data)
                 			        <span class="icon-bar"></span>                        
                 			      </button>
                 		      	  <div class="navbar-header">
-                		      		<a href="#" class="navbar-brand"><img src="madi.png" width="30px">${heading}</a>
+                		      		<a href="#" class="navbar-brand"><span><img src="madi.png" width="30px">${heading}</span></a>
                 		      	  </div>
                 		      	  <div class="collapse navbar-collapse" id="myNavbar">
                 		      		<ul class="nav navbar-nav">
