@@ -61,7 +61,7 @@ search_btn.onclick = function(){
                 search_span.innerHTML = 'Search Result: ';
                 var span_id=document.getElementById('li-span');
                 span_id.onclick =function(){
-                    this.parentElement.style.display='none';
+                    $(this).parentElement.style.display='none';
                 
             };
         }
