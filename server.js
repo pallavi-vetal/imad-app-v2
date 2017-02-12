@@ -107,7 +107,7 @@ function createTemplate(data)
                 		      	  </div>
                 		      	  <div class="collapse navbar-collapse" id="myNavbar">
                 		      		<ul class="nav navbar-nav">
-                				       <li><a href="article-one" class="w3-hover-blue">Home</a></li>
+                				       <li><a href="index.html" class="w3-hover-blue">Home</a></li>
                                      
                 				      <li class="dropdown w3-hover-green">
                 						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
