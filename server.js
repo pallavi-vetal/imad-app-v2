@@ -113,8 +113,8 @@ function createTemplate(data)
                 						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
                 						  <span class="caret"></span></a>
                 						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
-                						    <li role="presentation" ><a role="menuitem" href="article-three">Article-One</a></li>
-                						    <li role="presentation"><a role="menuitem" href="article-three">Aritcle-Two</a></li>
+                						    <li role="presentation" ><a role="menuitem" href="article-one">Article-One</a></li>
+                						    <li role="presentation"><a role="menuitem" href="article-two">Aritcle-Two</a></li>
                 						    <li role="presentation" ><a role="menuitem" href="article-three">Article-Three</a></li>
                 						    <li role="presentation" ></li>
                 						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
