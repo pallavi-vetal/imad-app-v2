@@ -1,3 +1,19 @@
+.parallax { 
+			    background-image: url("1.jpg");
+			    height:1500px; 
+			    background-attachment: fixed;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			   } 
+			   .form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.35);
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	text-align: left;
+}
 .floating-box {
 		    float: left;
 		    width: 30%;
