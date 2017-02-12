@@ -14,7 +14,7 @@ like_btn.onclick=function(){
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                like_btn.style.backgroundColor = red;
+               $(this).toggleClass('w3-red');
                 
             }
         }
