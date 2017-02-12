@@ -141,7 +141,7 @@ function createTemplate(data)
                 	      </div>
                      
 						<div class="container">
-							<div class="jumbotron w3-animate -zoom">
+							<div class="jumbotron w3-animate-zoom">
 								${contents}
 							</div>
 						</div>
