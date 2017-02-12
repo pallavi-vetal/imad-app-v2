@@ -23,6 +23,6 @@ like_btn.onclick=function(){
     
     //make a request to counter endpoint
     
-    request.open("http://pallavi-vetal.imad.hasura-app.io/counter",true);
+    request.open('GET',"http://pallavi-vetal.imad.hasura-app.io/counter",true);
     request.send(null);
 };
