@@ -95,7 +95,7 @@ function createTemplate(data)
 					<body>
 					<div class="parallax">
                 	      <div class="container">
-                	      	<nav class="navbar navbar-inverse  w3-animate-up" role="navigation">
+                	      	<nav class="navbar navbar-inverse  w3-animate-top" role="navigation">
                 	      
                 		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 			        <span class="icon-bar"></span>
