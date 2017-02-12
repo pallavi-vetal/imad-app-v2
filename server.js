@@ -128,7 +128,7 @@ function createTemplate(data)
                 				     <ul class="nav navbar-nav navbar-right">
                                               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                                               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                             <li><button class="btn btn-link glyphicon glyphicon-heart " id="like-btn" style="font-size:24px;text-decoration:none;"></button><span class="w3-text-white" id="count"></span></li>     
+                                            
                                     </ul>
                                         <form class="navbar-form navbar-left">
                                               <div class="form-group">
