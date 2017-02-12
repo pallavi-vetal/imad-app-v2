@@ -108,10 +108,7 @@ function createTemplate(data)
                 		      	  <div class="collapse navbar-collapse" id="myNavbar">
                 		      		<ul class="nav navbar-nav">
                 				       <li><a href="article-one" class="w3-hover-blue">Home</a></li>
-                                      <ul class="nav navbar-nav navbar-right">
-                                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                    </ul>
+                                     
                 				      <li class="dropdown w3-hover-green">
                 						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
                 						  <span class="caret"></span></a>
@@ -128,6 +125,10 @@ function createTemplate(data)
                 				      
                 				     
                 				    </ul>	
+                				     <ul class="nav navbar-nav navbar-right">
+                                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                    </ul>
                 		      	</div>	
                 		      </div>	
                 	      	</nav>
