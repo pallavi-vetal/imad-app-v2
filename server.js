@@ -107,7 +107,7 @@ function createTemplate(data)
                 		      	  </div>
                 		      	  <div class="collapse navbar-collapse" id="myNavbar">
                 		      		<ul class="nav navbar-nav">
-                				      
+                				       <li><a href="article-one" class="w3-hover-blue">Home</a></li>
                                       <ul class="nav navbar-nav navbar-right">
                                               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                                               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -116,18 +116,17 @@ function createTemplate(data)
                 						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
                 						  <span class="caret"></span></a>
                 						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
-                						    <li role="presentation" ><a role="menuitem" href="#">Personal</a></li>
-                						    <li role="presentation"><a role="menuitem" href="#">Professional</a></li>
-                						    <li role="presentation" ><a role="menuitem" href="#">Gallery</a></li>
+                						    <li role="presentation" ><a role="menuitem" href="article-three">Article-One</a></li>
+                						    <li role="presentation"><a role="menuitem" href="article-three">Aritcle-Two</a></li>
+                						    <li role="presentation" ><a role="menuitem" href="article-three">Article-Three</a></li>
                 						    <li role="presentation" ></li>
                 						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
                 						  </ul>
                 						</li>
-                				      <li><a href="article-one" class="w3-hover-blue">Home</a></li>
+                				     
                 				      <li class="active w3-hover-blue"><a href="#">${heading}</a></li>
-                				      <li><a href="article-two" class="w3-hover-red">Article Two</a></li>
-                				      <li><a href="article-three" class="w3-hover-teal">Article Three</a></li>
-                				      <li><h1>${date}</h1></li>
+                				      
+                				     
                 				    </ul>	
                 		      	</div>	
                 		      </div>	
