@@ -57,6 +57,8 @@ search_btn.onclick = function(){
                 }
                 var search_ul=document.getElementById('search-ul');
                 search_ul.innerHTML = list; 
+                var search_span=document.getElementById('search-span');
+                search_span.innerHTML = 'Search Result: ';
                 
             }
         }
