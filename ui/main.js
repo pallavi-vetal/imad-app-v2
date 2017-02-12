@@ -53,17 +53,17 @@ search_btn.onclick = function(){
                  var list = ' ';
                 for(var i=0;i<names.length;i++){
                     list += '<li><span id="li-span" class="w3-closebtn w3-margin-right w3-medium">&times;</span>' + names[i] + '</li>';
-                    
+                    var span_id=document.getElementById('li-span');
+                span_id.onclick =$(this).parentElement.style.display='none';
+                
                 }
                 var search_ul=document.getElementById('search-ul');
                 search_ul.innerHTML = list; 
                 var search_span=document.getElementById('search-span');
                 search_span.innerHTML = 'Search Result: ';
-                var span_id=document.getElementById('li-span');
-                span_id.onclick =function(){
-                    $(this).parentElement.style.display='none';
                 
-            };
+                
+           
         }
         
     }
