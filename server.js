@@ -172,6 +172,14 @@ app.get('/counter',function(req,res){
     counter+=1;
     res.send(counter.toString());
 });
+var names = [];
+app.get('/search-submit',function(req,res){
+   var name = req.query.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+   
+     
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -185,14 +193,7 @@ app.get('/ui/1.jpg', function (req, res) {
 app.get('/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-var names = [];
-app.get('/search-submit',function(req,res){
-   var name = req.query.name;
-   names.push(name);
-   res.send(JSON.stringify(names));
-   
-     
-});
+
 
 app.get('/:p',function(req,res){
  var articleName=req.params.p;
