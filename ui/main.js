@@ -59,11 +59,7 @@ search_btn.onclick = function(){
                 search_ul.innerHTML = list; 
                 var search_span=document.getElementById('search-span');
                 search_span.innerHTML = 'Search Result: ';
-                var span_id=document.getElementById('li-span');
-                span_id.onclick =function(){
-                    $(this).parentElement.style.display='none';
                 
-            };
         }
         
     }
