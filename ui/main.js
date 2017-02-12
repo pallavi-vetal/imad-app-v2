@@ -52,7 +52,7 @@ search_btn.onclick = function(){
                 names = JSON.parse(names);
                  var list = ' ';
                 for(var i=0;i<names.length;i++){
-                    list += '<li><span id="li-span" class="w3-closebtn w3-margin-right w3-medium">&times;</span><hr>' + names[i] + '</li>';
+                    list += '<li><span id="li-span" class="w3-closebtn w3-margin-right w3-medium">&times;</span><br>' + names[i] + '</li>';
                     
                 }
                 var search_ul=document.getElementById('search-ul');
