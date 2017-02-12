@@ -73,7 +73,7 @@ search_btn.onclick = function(){
     //make a request to counter endpoint
     var search_input = document.getElementById('search-input');
     var search_val = search_input.value;
-    request.open('GET','http://pallavi-vetal.imad.hasura-app.io/search-submit?name='+search_val,true);
+    request.open('GET','http://pallavi-vetal.imad.hasura-app.io/submit-query?name='+search_val,true);
     request.send(null);
       
 };
