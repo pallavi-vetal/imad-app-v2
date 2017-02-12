@@ -1,79 +1,151 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset = "utf-8">
-     <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
-     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-      
-	 <title>Home Page</title>
-	  
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
 
-   
-</head>
-<body>
-	<div class="parallax">
-	      <div class="container">
-	      	<nav class="navbar navbar-inverse  w3-animate-bottom" role="navigation">
-	      	<div class="container-fluid">
-		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>                        
-			      </button>
-		      	  <div class="navbar-header">
-		      		<a href="#" class="navbar-brand"><img src="madi.png" width="30px"></a>
-		      	  </div>
-		      	  <div class="collapse navbar-collapse" id="myNavbar">
-		      		<ul class="nav navbar-nav">
-				      <li class="active w3-hover-blue"><a href="#">Home</a></li>
-				      <li class="dropdown w3-hover-green">
-						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
-						  <span class="caret"></span></a>
-						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
-						    <li role="presentation" ><a role="menuitem" href="#">Personal</a></li>
-						    <li role="presentation"><a role="menuitem" href="#">Professional</a></li>
-						    <li role="presentation" ><a role="menuitem" href="#">Gallery</a></li>
-						    <li role="presentation" ></li>
-						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
-						  </ul>
-						</li>
-				      <li><a href="#" class="w3-hover-blue">Article One</a></li>
-				      <li><a href="#" class="w3-hover-red">Article Two</a></li>
-				      <li><a href="#" class="w3-hover-teal">Article Three</a></li>
-				    </ul>	
-		      	</div>	
-		      </div>	
-	      	</nav>
-	      </div>
-     
-      <div class="container">
-      	<div class="floating-box w3-animate-zoom ">
-      		<div class="navbar-header">
-      			<a class="navbar-brand" href="#" style="color: white">My Name</a>
-      		</div>
-  	    </div>	
-  	    <div class="floating-box w3-animate-zoom ">
-      		<div class="navbar-header">
-      			<a class="navbar-brand" href="#" style="color: white">My Name</a>
-      		</div>
-  	    </div>	
-  	    </div>
-    </div>    
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-      <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
-	.dropdown:hover .dropdown-menu{
-		display: block;
-		background: gray;	
+var app = express();
+app.use(morgan('combined'));
+var articles = {
+		'article-one' : {
+			title:'Article One',
+			heading:'Article One',
+			date:'March 21, 1996',
+			contents:`
+					<p>
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>
+					<p>
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>
+					<p>
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>`},
+		'article-three' : {
+			title:'Article Three',
+			heading:'Article Three',
+			date:'Jan 31, 2017',
+			contents:`
+					<p>
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>
+					
+					<p>
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Three.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>`},
+		'article-two': {
+			title:'Article Two',
+			heading:'Article Two',
+			date:'May 29, 1991',
+			contents:`
+					<p>
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>
+					<p>
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article One.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>
+					<p>
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+						This is Article Two.It is about how to reduce redandancy in your code.It's fun doing this.
+					</p>`}					
+};
+function createTemplate(data)
+{
+			var title = data.title;
+			var heading = data.heading;
+			var date = data.date;
+			var contents = data.contents;
+			var htmlTemplate = `
+					<!DOCTYPE html>
+					<html>
+					<head>
+						<title>${title}</title>
+						<!-- Latest compiled and minified CSS -->
+						<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-		
-	}
-</style>      
-</body>
+						<!-- jQuery library -->
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-</html>
+						
+					</head>
+					<body>
+						<nav class="navbar navbar-inverse">
+							<div class="container">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">${heading}</a>
+								</div>
+								<div class="collapse navbar-collapse" id="mynav">
+									<ul class="nav navbar-nav">
+										<li class="active"><a href="#">Home</a></li>
+										<li class="active"><a href="#">${date}</a></li>
+									</ul>
+								</div>	
+									
+							</div>
+						</nav>
+						<div class="container">
+							<div class="jumbotron">
+								${contents}
+							</div>
+						</div>
+						<!-- Latest compiled JavaScript -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+					</body>
+					</html>
+			`;
+	return htmlTemplate;
+}
+
+
+app.get('/madi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+app.get('/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+var counter=0;
+app.get('/counter' , function (req, res) {
+  counter=counter+1;
+  res.send(counter.toString());
+});
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+app.get('/1.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '1.jpg'));
+});
+
+
+app.get('/:p',function(req,res){
+ var articleName=req.params.p;
+ res.send(createTemplate(articles[articleName]));
+});
+
+
+var port = 8080; // Use 8080 for local development because you might already have apache running on 80
+app.listen(8080, function () {
+  console.log(`IMAD course app listening on port ${port}!`);
+});
