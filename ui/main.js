@@ -39,7 +39,7 @@ var search_btn = document.getElementById('search-btn');
 search_btn.onclick = function(){
     
     //create request object
-    var list = ' ';
+   
     var request = new XMLHttpRequest();
     
      //capture and store response into a variable
@@ -50,8 +50,9 @@ search_btn.onclick = function(){
                 //capture the list of names
                 var names = request.responseText;
                 names = JSON.parse(names);
+                 var list = ' ';
                 for(var i=0;i<names.length;i++){
-                    list+='<li'> + names[i] + '</li>';
+                    list += '<li'> + names[i] + '</li>';
                     
                 }
                 var search_ul=document.getElementById('search-ul');
