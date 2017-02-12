@@ -43,7 +43,7 @@ search_btn.onclick = function(){
     var request = new XMLHttpRequest();
     
      //capture and store response into a variable
-     
+    var margin_top = 0;
     request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status === 200){
@@ -59,6 +59,8 @@ search_btn.onclick = function(){
                 search_ul.innerHTML = list; 
                 var search_span=document.getElementById('search-span');
                 search_span.innerHTML = 'Search Result: ';
+                margin_top+=10+'px';
+                search_span.style.marginTop=margin+top;
                 
         }
         
