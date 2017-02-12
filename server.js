@@ -82,25 +82,42 @@ function createTemplate(data)
 						
 					</head>
 					<body>
-						<nav class="navbar navbar-inverse">
-							<div class="container">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand" href="#">${heading}</a>
-								</div>
-								<div class="collapse navbar-collapse" id="mynav">
-									<ul class="nav navbar-nav">
-										<li class="active"><a href="#">Home</a></li>
-										<li class="active"><a href="#">${date}</a></li>
-									</ul>
-								</div>	
-									
-							</div>
-						</nav>
+					<div class="parallax">
+                	      <div class="container">
+                	      	<nav class="navbar navbar-inverse  w3-animate-bottom" role="navigation">
+                	      	<div class="container-fluid">
+                		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                			        <span class="icon-bar"></span>
+                			        <span class="icon-bar"></span>
+                			        <span class="icon-bar"></span>                        
+                			      </button>
+                		      	  <div class="navbar-header">
+                		      		<a href="#" class="navbar-brand"><img src="madi.png" width="30px">${heading}</a>
+                		      	  </div>
+                		      	  <div class="collapse navbar-collapse" id="myNavbar">
+                		      		<ul class="nav navbar-nav">
+                				      <li class="active w3-hover-blue"><a href="#">Home</a></li>
+                				      <li class="navbar-right w3-hover-blue">${date}</li>
+                				      <li class="dropdown w3-hover-green">
+                						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
+                						  <span class="caret"></span></a>
+                						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
+                						    <li role="presentation" ><a role="menuitem" href="#">Personal</a></li>
+                						    <li role="presentation"><a role="menuitem" href="#">Professional</a></li>
+                						    <li role="presentation" ><a role="menuitem" href="#">Gallery</a></li>
+                						    <li role="presentation" ></li>
+                						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
+                						  </ul>
+                						</li>
+                				      <li><a href="article-one" class="w3-hover-blue">Article One</a></li>
+                				      <li><a href="article-two" class="w3-hover-red">Article Two</a></li>
+                				      <li><a href="article-three" class="w3-hover-teal">Article Three</a></li>
+                				    </ul>	
+                		      	</div>	
+                		      </div>	
+                	      	</nav>
+                	      </div>
+                     
 						<div class="container">
 							<div class="jumbotron">
 								${contents}
