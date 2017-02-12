@@ -141,8 +141,15 @@ function createTemplate(data)
 						</div>
 						<!-- Latest compiled JavaScript -->
 						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                        <style type="text/css">
+                	.dropdown:hover .dropdown-menu{
+                		display: block;
+                		background: gray;	
 
-					</body>
+		
+                    	}
+                    </style>    
+                    </body>
 					</html>
 			`;
 	return htmlTemplate;
