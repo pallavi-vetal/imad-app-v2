@@ -1,96 +1,79 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Home Page</title>
-       <!-- Bootstrap -->
-     	<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-        
-		<link rel="stylesheet" type="text/css" href="ui/style.css">
-	
-		
-	
-		
-    </head>
-    <body>
-        <div class="parallax">
-	      <div class="container">
-	      	<nav class="navbar navbar-inverse  w3-animate-bottom" role="navigation">
-	      
-		      	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>                        
-			      </button>
-		      	  <div class="navbar-header">
-		      		<a href="#" class="navbar-brand"><img src="madi.png" width="30px"></a>
-		      	  </div>
-		      	  <div class="collapse navbar-collapse" id="myNavbar">
-		      		<ul class="nav navbar-nav">
-				      <li class="active w3-hover-blue"><a href="#">Home</a></li>
-				      <li class="dropdown w3-hover-green">
-						  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Quick Links  
-						  <span class="caret"></span></a>
-						  <ul class="dropdown-menu " role="menu" aria-labelledby="menu1">
-						    <li role="presentation" ><a role="menuitem" href="#">Personal</a></li>
-						    <li role="presentation"><a role="menuitem" href="#">Professional</a></li>
-						    <li role="presentation" ><a role="menuitem" href="#">Gallery</a></li>
-						    <li role="presentation" ></li>
-						    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
-						  </ul>
-						</li>
-				      <li><a href="article-one" class="w3-hover-blue">Article One</a></li>
-				      <li><a href="article-two" class="w3-hover-red">Article Two</a></li>
-				      <li><a href="article-three" class="w3-hover-teal">Article Three</a></li>
-				    </ul>	
-				    <ul class="nav navbar-nav navbar-right">
-                                              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                              <li><button class="btn btn-link glyphicon glyphicon-heart " id="like-btn" style="font-size:24px;text-decoration:none;"></button><span class="w3-text-white" id="count"></span></li>         	
-		      
-                                    </ul>
-                                        <div class="navbar-form navbar-left" method="put">
-                                              <div class="form-group">
-                                                <input type="text" class="form-control" id="search-input" placeholder="Search">
-                                              </div>
-                                              <input type="submit" class="btn btn-danger navbar-btn" id="search-btn" value="Search">
-                                        </div>
-                        	</div>	
-		   	
-	      	</nav>
-	      </div>
-     
-      <div class="container">
-      	<div class="floating-box w3-animate-zoom ">
-      		<div class="navbar-header">
-      			<a class="navbar-brand" href="#" style="color: white"><span id="search-span"></span></a>
-      			<ul id="search-ul" class="w3-ul w3-card-8 w3-hoverable  w3-text-white" style="width:100%">
-      			    
-      			</ul>
-      		</div>
-  	    </div>	
-  	   </div>
-    </div>    
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-      <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
-	.dropdown:hover .dropdown-menu{
-		display: block;
-		background: gray;	
+console.log('Loaded!');
 
-		
-	}
-</style>      
-        <script type="text/javascript" src="/main.js">
-        </script>
-    </body>
-</html>
+//****************************For counting likes*****************************
+var red= '#FF69B4';
+var like_btn=document.getElementById('like-btn');
+like_btn.onclick=function(){
+  
+    //create request object
+    
+    var request = new XMLHttpRequest();
+    
+     //capture and store response into a variable
+     
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+                like_btn.style.color = red ;
+                
+            }
+        }
+        
+    };
+   
+    
+    //make a request to counter endpoint
+    
+    request.open('GET',"http://pallavi-vetal.imad.hasura-app.io/counter",true);
+    request.send(null);
+};
+
+//************************* For Searching Operation *********************/
+
+
+
+var search_btn = document.getElementById('search-btn');
+search_btn.onclick = function(){
+    
+    //create request object
+   
+    var request = new XMLHttpRequest();
+    
+     //capture and store response into a variable
+     
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                //capture the list of names
+                var names = request.responseText;
+                names = JSON.parse(names);
+                 var list = ' ';
+                for(var i=0;i<names.length;i++){
+                    list += '<li><span id="li-span" class="w3-closebtn w3-margin-right w3-medium">&times;</span>' + names[i] + '</li>';
+                    
+                }
+                var search_ul=document.getElementById('search-ul');
+                search_ul.innerHTML = list; 
+                var search_span=document.getElementById('search-span');
+                search_span.innerHTML = 'Search Result: ';
+                var span_id=document.getElementById('li-span');
+                span_id.onclick =function(){
+                    $(this).parentElement.style.display='none';
+                
+            };
+        }
+        
+    }
+    };
+   
+    
+    //make a request to counter endpoint
+    var search_input = document.getElementById('search-input');
+    var search_val = search_input.value;
+    request.open('GET','http://pallavi-vetal.imad.hasura-app.io/search-submit?name='+search_val,true);
+    request.send(null);
+      
+};
