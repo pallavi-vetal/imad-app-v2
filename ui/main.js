@@ -29,31 +29,3 @@ like_btn.onclick=function(){
     request.send(null);
 };
 
-var like_btn1 = document.getElementById('like-btn1');
-like_btn.onclick = function(){
-  
-    //create request object
-    
-    var request = new XMLHttpRequest();
-    
-     //capture and store response into a variable
-     
-    request.onreadystatechange = function(){
-        if(request.readyState === XMLHttpRequest.DONE){
-            if(request.status === 200){
-                var counter = request.responseText;
-                var span = document.getElementById('count1');
-                span.innerHTML = counter.toString();
-                like_btn1.style.color = red ;
-                
-            }
-        }
-        
-    };
-   
-    
-    //make a request to counter endpoint
-    
-    request.open('GET',"http://pallavi-vetal.imad.hasura-app.io/counter",true);
-    request.send(null);
-};
