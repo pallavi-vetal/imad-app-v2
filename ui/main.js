@@ -67,6 +67,7 @@ search_btn.onclick = function(){
         }
         
     }
+    };
    
     
     //make a request to counter endpoint
