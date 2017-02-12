@@ -29,7 +29,7 @@ like_btn.onclick=function(){
     request.send(null);
 };
 
-var like_btn = document.getElementById('like-btn1');
+var like_btn1 = document.getElementById('like-btn1');
 like_btn.onclick = function(){
   
     //create request object
