@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var red= '#ff0000';
+var red= '#FF69B4';
 var like_btn=document.getElementById('like-btn');
 like_btn.onclick=function(){
   
