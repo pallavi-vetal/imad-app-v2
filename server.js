@@ -122,7 +122,7 @@ function createTemplate(data)
                 						</li>
                 				     
                 				      <li class="active w3-hover-blue"><a href="#">${heading}</a></li>
-                				      <li class="w3-hover-red">${date}</li>
+                				      <li class="w3-hover-red"><a>${date}</a></li>
                 				     
                 				    </ul>	
                 				     <ul class="nav navbar-nav navbar-right">
