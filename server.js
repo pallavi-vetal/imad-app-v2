@@ -4,6 +4,9 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/ui'));
+
 var articles = {
 		'article-one' : {
 			title:'Article One',
@@ -165,7 +168,7 @@ function createTemplate(data)
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.render(path.join(__dirname, 'ui', 'index'));
 });
 var counter=0;
 app.get('/counter',function(req,res){
@@ -200,7 +203,6 @@ app.get('/:p',function(req,res){
  res.send(createTemplate(articles[articleName]));
 });
 
-var port = 8080; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8080, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
