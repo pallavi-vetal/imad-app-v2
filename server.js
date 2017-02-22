@@ -4,8 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/ui'));
+
 
 var articles = {
 		'article-one' : {
@@ -202,7 +201,6 @@ app.get('/:p',function(req,res){
  var articleName=req.params.p;
  res.send(createTemplate(articles[articleName]));
 });
-
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.listen(8080, function () {
+  console.log(`IMAD course app listening on port ${port}!`);
 });
